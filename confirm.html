@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-3.2.1.min.js" >
+</script>
+<script type="text/javascript" src="layui.js" >
+</script>
+<link rel="stylesheet" href="css\layui.css">
+</head>
+<style>
+body{
+  margin-left: 450px;
+  margin-top: 220px;
+  padding: 0px;
+  border: 0px;
+  width: 1280px;
+  height: 800px;
+
+}
+#logbox{
+  position:relative;
+  width: 400px;
+  height: 200px;
+  top: 250px;
+  left: 500px;
+  border: solid;
+}
+</style>
+
+<body>
+    <form  class="layui-form"  method="post">
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户名</label>
+        <div class="layui-input-inline">
+          <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+        </div>
+
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">密保问题</label>
+      <div class="layui-input-inline" >
+        <select name="question" lay-verify="required">
+          <option value=""></option>
+          <option value="1">我第一次坐飞机是去哪里？</option>
+          <option value="2">我父亲的生日？</option>
+          <option value="3">我母亲的生日？</option>
+          <option value="4">我养的第一只宠物叫什么？</option>
+          <option value="5">我小学的学校叫什么名字？</option>
+          <option value="6">我最喜欢的城市？</option>
+        </select>
+
+          <input type="text" name="qanswer" required  lay-verify="required" placeholder="请输入问题答案" autocomplete="off" class="layui-input">
+
+      </div>
+    </div>
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+        </div>
+      </div>
+      <script>
+      layui.use(['form', 'jquery'], function() {
+      })
+      </script>
+</form>
+
+</body>
+</html>

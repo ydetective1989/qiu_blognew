@@ -1,0 +1,57 @@
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>邱氏博客</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js" >
+    </script>
+    <link rel="stylesheet" href="css\layui.css">
+   <script type="text/javascript" src="layui.js" ></script>
+  </head>
+  <body>
+  <form  method="post">
+    <div class="layui-form-item">
+      <div class="layui-input-block">
+      </div>
+    </div>
+    <div>
+    <textarea id="demo" name="talk" id="blogtext"style="display: none;"></textarea>
+  <script>
+  layui.use('layedit', function(){
+  var layedit = layui.layedit;
+  layedit.build('demo',{
+    height:300,
+
+  }
+  ); //建立编辑器
+  });
+  </script>
+    </div>
+
+    <div class="layui-form-item">
+      <div class="layui-input-block">
+        <button id="send" class="layui-btn"  lay-submit lay-filter="formDemo" >立即提交</button>
+        <button type="reset"  class="layui-btn layui-btn-primary">重置</button>
+      </div>
+    </div>
+
+  <script>
+  layui.use(['form', 'jquery'], function() {
+    var $ = layui.jquery;
+    var form = layui.form();
+    form.verify({
+      regPwd: function(value) {
+        //获取密码
+        var pwd = $("#password").val();
+        if(!new RegExp(pwd).test(value)) {
+          return '两次输入的密码不一致';
+        }
+      }
+    });
+  });
+  </script>
+
+</form>
+
+  </body>
+  </html>

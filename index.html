@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-3.2.1.min.js" >
+</script>
+<script type="text/javascript" src="layui.js" >
+</script>
+<link rel="stylesheet" href="css\layui.css">
+<style type="text/css" >
+body{
+  margin: 0px;
+  border: 0px;
+  padding:0px;
+  width:1920px;
+  height: 4000px;
+  background-color: green;
+}
+#top{
+width:1280px;
+height:200px;
+margin:10px;
+border:5px;
+background-color:#1E9FFF;
+}
+#topnav{
+width:1280px;
+height: 50px;
+margin-top: 5px;
+margin-left:10px;
+background-color: yellow;
+}
+#main{
+ width: 1280px;
+ height: 760px;
+ margin:10px;
+ background-color: red;
+}
+#main-left{
+  width: 310px;
+  height:730px;
+  margin: 10px;
+  background-color: blue;
+  float: left;
+}
+#pic-left{
+  width: 290px;
+  height: 290px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  float: left;
+}
+#inf-left{
+  width:290px;
+  height: 390px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: pink;
+  float: left;
+}
+#main-right{
+  width: 930px;
+  height: 730px;
+  margin:10px;
+  background-color: #fbfbfb;
+  float: left;
+}
+#maininf{
+  width: 910px;
+  height: 200px;
+  margin: 10px;
+  background-color: #c2c2c2;
+  float:left;
+}
+#page{
+  width: 1280px;
+  height: 30px;
+  margin: 10px;
+  background-color: black;
+}
+</style>
+<title>个人博客</title>
+</head>
+
+<body>
+
+<div id="top" >首焦图</div><!--首焦图模块 可修改图片-->
+
+<div id="topnav"><!--导航-->
+  <ul class="layui-nav" lay-filter="">
+    <li class="layui-nav-item"><a href="">首页</a></li>
+    <li class="layui-nav-item"><a href="">文章</a></li>
+    <li class="layui-nav-item"><a href="">相册</a></li>
+    <li class="layui-nav-item">
+  </ul>
+</div><!--导航模块-->
+<script>
+//注意：导航 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element();
+  //…
+});
+</script>
+
+<div id="main">
+  <div id="main-left">
+    <div id="pic-left">头像</div><!--首页左侧头像 可修改-->
+    <div id="inf-left">
+      <b>XXXX的博客</b>
+    </div><!--首页左侧简介 可修改-->
+  </div>
+  <div id="main-right">
+   <div id="maininf"></div><!--文章模块1  显示文章标题 文章前xxx字的预览 点击显示/隐藏全文/评论/转发/点赞-->
+   <div id="maininf"></div><!--文章模块2  显示文章标题 文章前xxx字的预览 点击显示/隐藏全文/评论/转发/点赞-->
+   <div id="maininf"></div><!--文章模块3  显示文章标题 文章前xxx字的预览 点击显示/隐藏全文/评论/转发/点赞-->
+  </div>
+</div><!--文章模块大框架  显示文章标题 文章前xxx字的预览 点击显示/隐藏全文/评论/转发/点赞-->
+<div id="page">
+
+</div><!--翻页 跳转-->
+</body>
+</html>
